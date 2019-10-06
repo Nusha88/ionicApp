@@ -8,14 +8,43 @@
       </ion-header>
       <ion-content>
         <ion-list>
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
-              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item [routerDirection]="'root'" [routerLink]="['/home']">
               <ion-label>
-                {{p.title}}
+                {{ 'На главную'  | translate }}
+              </ion-label>
+            </ion-item>
+            <ion-item [routerDirection]="'root'" [routerLink]="['/find-letter']">
+              <ion-label>
+                {{ 'NAVIGATION.LETTERS.FINDLETTER'  | translate }}
+              </ion-label>
+            </ion-item>
+            <ion-item [routerDirection]="'root'" [routerLink]="['/start-with']">
+              <ion-label>
+                {{ 'NAVIGATION.LETTERS.STARTWITHLETTER'  | translate }}
+              </ion-label>
+            </ion-item>
+            <ion-item [routerDirection]="'root'" [routerLink]="['/make-a-word-from-letters']">
+              <ion-label>
+                {{ 'NAVIGATION.LETTERS.MAKEAWORDFROMLETTERS'  | translate }}
+              </ion-label>
+            </ion-item>
+            <ion-item [routerDirection]="'root'" [routerLink]="['/count']">
+              <ion-label>
+                {{ 'NAVIGATION.NUMBERS.COUNT'  | translate }}
+              </ion-label>
+            </ion-item>
+              <ion-item [routerDirection]="'root'" [routerLink]="['/make-the-same-row']">
+              <ion-label>
+                {{ 'NAVIGATION.GAMES.MAKETHESAMEROW'  | translate }}
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
+          <ion-item>
+            <ion-select #langSelect (ionChange)="translate.use(langSelect.value) && changeLang(langSelect.value)" >
+              <ion-select-option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</ion-select-option>
+            </ion-select>
+          </ion-item>
         </ion-list>
       </ion-content>
     </ion-menu>

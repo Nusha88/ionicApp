@@ -1,0 +1,36 @@
+{
+  "HOME": {
+    "TITLE": "Apprendre en jouant"
+  },
+  "NAVIGATION": {
+    "LETTERS": {
+      "TITLE": "Lettres",
+      "FINDLETTER": "Trouver la lettre",
+      "STARTWITHLETTER": "Commence par une lettre",
+      "MAKEAWORDFROMLETTERS": "Faire un mot de lettres"
+    },
+    "NUMBERS": {
+      "TITLE": "Les chiffres",
+      "COUNT": "Comte"
+    },
+    "GAMES": {
+      "TITLE": "Jeux",
+      "MAKETHESAMEROW": "Faire la même rangée"
+    }
+  },
+  "ALPHABET": {
+    "TITLE": "Trouver la lettre"
+  },
+  "STARTFROMLETTER": {
+    "TITLE": "Ce qui commence par une lettre..."
+  },
+  "MAKEAWORDFROMLETTERS": {
+    "TITLE": "Faire un mot de lettres"
+  },
+  "MAKETHESAMEROW": {
+    "TITLE": "Répétez la séquence d'images"
+  },
+  "COUNT": {
+    "TITLE": "Comptez combien"
+  }
+}

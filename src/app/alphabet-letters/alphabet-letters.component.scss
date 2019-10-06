@@ -1,0 +1,37 @@
+@import "../../assets/scss/mixins";
+@import "../../assets/scss/breakpoints";
+.letter {
+  font-size: 10rem;
+  padding: 2rem 2rem 0;
+}
+.audio {
+  text-align: center;
+  font-size: 2rem;
+  color: darkcyan;
+  padding-bottom: 1rem;
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+  padding-top: 7rem;
+  li {
+    border: 2px solid darkcyan;
+    display: inline-block;
+    margin-right: .5rem;
+    padding: 0 1rem;
+    cursor: pointer;
+    margin-bottom: .5rem;
+    font-size: 5rem;
+    color: darkcyan;
+  }
+  li.red {
+    color: coral;
+    background-color: transparent !important;
+  }
+}
+.btn-outline-info {
+  margin-right: 3rem;
+}
+ion-content{
+  --background: url(../../assets/images/bg-phone.png)  0 0/100% 100% no-repeat;
+}

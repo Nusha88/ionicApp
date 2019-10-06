@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      {{ 'COUNT.TITLE' | translate }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content class="container count-to-five">
+      <div class="game-container">
+        <h2>{{ 'COUNT.TITLE' | translate }}</h2>
+        <ul [@fadeIn]="state">
+          <li *ngFor="let i of ' '.repeat(number).split(''), let x = index">
+            <img src={{arr.src}} alt="">
+          </li>
+        </ul>
+        <ul class="numbers">
+          <li *ngFor="let n of [1, 2, 3, 4 ,5]" (click)="check(n)">{{n}}</li>
+        </ul>
+      </div>
+      <div class="answers-block">
+        <div class="row" *ngIf="wrongAnswer">
+          <div class="col-md-12 text-center">
+            <i class="fas fa-frown wrong-number"></i>
+          </div>
+        </div>
+        <div class="row" *ngIf="rightAnswer">
+          <div class="col-md-12 text-center">
+            <i class="fas fa-smile right-number"></i>
+          </div>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,38 @@
+{
+  "HOME": {
+    "TITLE": "Учимся играя",
+    "SELECT": "Сменить язык"
+  },
+  "NAVIGATION": {
+    "LETTERS": {
+      "TITLE": "Буквы",
+      "FINDLETTER": "Найди букву",
+      "STARTWITHLETTER": "Начинается с буквы",
+      "MAKEAWORDFROMLETTERS": "Составь слово из букв"
+    },
+    "NUMBERS": {
+      "TITLE": "Цифры",
+      "COUNT": "Посчитай"
+    },
+    "GAMES": {
+      "TITLE": "Игры",
+      "MAKETHESAMEROW": "Повтори порядок"
+    }
+  },
+  "ALPHABET": {
+    "TITLE": "Найди букву"
+  },
+  "STARTFROMLETTER": {
+    "TITLE": "Что начинается с буквы..."
+  },
+  "MAKEAWORDFROMLETTERS": {
+    "TITLE": "Составь слово из букв"
+  },
+  "MAKETHESAMEROW": {
+    "TITLE": "Повтори последовательность картинок"
+  },
+  "COUNT": {
+    "TITLE": "Посчитай сколько"
+  }
+}
+

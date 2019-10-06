@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      {{ 'MAKETHESAMEROW.TITLE' | translate }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content  class="make-the-same">
+      <div class="game-container">
+        <h2>{{ 'MAKETHESAMEROW.TITLE' | translate }}</h2>
+        <ul [@fadeIn]="state">
+          <li class="example" *ngFor="let item of gameArr"><img src="{{item.src}}" alt=""></li>
+        </ul>
+        <div class="drag-container" cdkDropList cdkDropListOrientation="horizontal" (cdkDropListDropped)="drop($event)">
+          <ul [@fadeIn]="state">
+            <li cdkDrag
+                *ngFor="let it of draggbleArr; let i = index"
+                ><img src="{{it.src}}" alt=""></li>
+          </ul>
+        </div>
+      </div>
+      <div class="answers-block">
+        <div class="row" *ngIf="wrongAnswer">
+          <div class="col-md-12 text-center">
+            <i class="fas fa-frown wrong-number"></i>
+          </div>
+        </div>
+        <div class="row" *ngIf="rightAnswer">
+          <div class="col-md-12 text-center">
+            <i class="fas fa-smile right-number"></i>
+          </div>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

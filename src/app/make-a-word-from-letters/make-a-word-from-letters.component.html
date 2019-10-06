@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+        {{ 'MAKEAWORDFROMLETTERS.TITLE' | translate }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content class="container make-a-word">
+      <div class="game-container">
+          <h2>{{ 'MAKEAWORDFROMLETTERS.TITLE' | translate }}</h2>
+        <div class="row">
+          <div class="col-md-12 text-center">
+                <img [@fadeIn]="state" src={{showPic.src}} alt="">
+                <div class="drag-container" cdkDropList
+                     cdkDropListOrientation="horizontal"
+                     (cdkDropListDropped)="drop($event)">
+                  <ul>
+                    <li cdkDrag *ngFor="let letter of picLetters"> {{letter}}</li>
+                  </ul>
+                </div>
+          </div>
+          <div class="answers-block">
+            <div class="row" *ngIf="wrongAnswer">
+              <div class="col-md-12 text-center">
+                <i class="fas fa-frown wrong-number"></i>
+              </div>
+            </div>
+            <div class="row" *ngIf="rightAnswer">
+              <div class="col-md-12 text-center">
+                <i class="fas fa-smile right-number"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

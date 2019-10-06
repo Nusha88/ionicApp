@@ -1,0 +1,53 @@
+@import "../../assets/scss/mixins";
+@import "../../assets/scss/breakpoints";
+h2 {
+  @include h2_heading;
+}
+
+.game-container {
+  position: relative;
+  background-color: rgba(255,255,255,0.8);
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+}
+.make-the-same {
+  position: relative;
+  ul {
+    list-style: none;
+    text-align: center;
+    padding-top: 3rem;
+    padding-left: 0;
+    li {
+      display: inline-block;
+      margin-right: 1rem;
+      cursor: pointer;
+      img {
+        width: 2.7rem;
+        height: auto;
+      }
+    }
+    li.example {
+      cursor: default;
+      opacity: .5;
+    }
+  }
+}
+
+.answers-block {
+  right: 0.5rem;
+  position: absolute;
+  bottom: 0.5rem;
+  text-align: right;
+  .wrong-number {
+    color: coral;
+    font-size: 3rem;
+  }
+
+  .right-number {
+    color: darkcyan;
+    font-size: 3rem;
+  }
+}
+ion-content{
+  --background: url(../../assets/images/bg-phone.png)  0 0/100% 100% no-repeat;
+}

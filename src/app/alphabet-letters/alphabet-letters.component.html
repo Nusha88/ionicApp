@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <div class="letter">{{findLetter}}</div>
+    <div class="audio">
+      <i class="fas fa-volume-up" (click)="playAudio(sounds)"></i>
+    </div>
+  </ion-card>
+  <ion-card>
+    <h3>vjgvk,vb</h3>
+    <h3>{{ lettersArr }}</h3>
+      <ion-item *ngFor="let letter of lettersArr; let i = index" [ngClass]="{'red': selectedIdx == i}"
+          (click)="selectItem(letter, i)">{{lettersArr}}
+      </ion-item>
+  </ion-card>
+</ion-content>

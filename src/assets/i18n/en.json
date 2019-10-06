@@ -1,0 +1,37 @@
+{
+  "HOME": {
+    "TITLE": "Learn by playing"
+  },
+  "NAVIGATION": {
+    "LETTERS": {
+      "TITLE": "Letters",
+      "FINDLETTER": "Find a letter",
+      "STARTWITHLETTER": "Begins with a letter",
+      "MAKEAWORDFROMLETTERS": "Make a word from letters"
+    },
+    "NUMBERS": {
+      "TITLE": "Numbers",
+      "COUNT": "Count"
+    },
+    "GAMES": {
+      "TITLE": "Games",
+      "MAKETHESAMEROW": "Make the same row"
+    }
+  },
+  "ALPHABET": {
+    "TITLE": "Find a letter"
+  },
+  "STARTFROMLETTER": {
+    "TITLE": "What begins with a letter..."
+  },
+  "MAKEAWORDFROMLETTERS": {
+    "TITLE": "Make a word from letters"
+  },
+  "MAKETHESAMEROW": {
+    "TITLE": "Repeat the sequence of pictures"
+  },
+  "COUNT": {
+    "TITLE": "Count how much"
+  }
+}
+

@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+        {{ 'STARTFROMLETTER.TITLE' | translate }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content class="game-container">
+        <h2>{{ 'STARTFROMLETTER.TITLE' | translate }}</h2>
+            <div [@letterFadeIn]="state2" class="letter">{{findLetter}}</div>
+            <div class="audio">
+              <i class="fas fa-volume-up" (click)="playAudio()"></i>
+            </div>
+            <ul>
+              <li *ngFor="let pic of gameArr; let i = index" (click)="checkPic(pic)">
+                <img class="big-img" [@fadeIn]="state" src={{pic.src}} alt="">
+                <img class="small-img" [@fadeIn]="state" src={{pic.srcMin}} alt="">
+              </li>
+            </ul>
+          <ion-col class="answers-block">
+            <div class="row" *ngIf="wrongAnswer">
+              <div class="col-md-12 text-center">
+                <i class="fas fa-frown wrong-number"></i>
+              </div>
+            </div>
+            <div class="row" *ngIf="rightAnswer">
+              <div class="col-md-12 text-center">
+                <i class="fas fa-smile right-number"></i>
+              </div>
+            </div>
+          </ion-col>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
